@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Ethrise_DApp.sol": "Ballot"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Ethrise_DApp.sol": {
+			"keccak256": "0xff74db30bd749634ac41d92bac40092debfcbd7b1c6321cf6a041bb05c67f76f",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e05775fca257ba6c5222305c6d66457775e08f8739b60e39a9204c37b744e091",
+				"dweb:/ipfs/QmdcgiLh8PiAeTo3Cq7fbzvPWCHELHCUT8kExkvc25puBF"
+			]
+		}
+	},
+	"version": 1
+}
