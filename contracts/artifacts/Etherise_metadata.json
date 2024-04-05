@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Ethrise_DApp.sol": "Etherise"
+			"contracts/Etherise_DApp.sol": "Etherise"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -32,7 +32,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Ethrise_DApp.sol": {
+		"contracts/Etherise_DApp.sol": {
 			"keccak256": "0x46ce5678d624c0e225586212eaf37c5dfc97a48e3c6de215437f4520ced77d52",
 			"license": "GPL-3.0",
 			"urls": [
