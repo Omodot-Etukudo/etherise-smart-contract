@@ -414,11 +414,11 @@
 	},
 	"sources": {
 		"contracts/Etherise_DApp.sol": {
-			"keccak256": "0xed265deed08271d487f0d7760423c0d77a5523d0897b9666d9adf052b12769ee",
+			"keccak256": "0x3c227dd3c991042ab64c7124d8474ef80d5e2810d825391962f1bba8a6f1d46d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8060dd177c9f388d54432cd2f98edcf934f88dea4a2e2dc142415dae38fee543",
-				"dweb:/ipfs/QmYwQXi7L22ReL2WuCgNwgg97eYJZDaLdRPP29SGeucfj1"
+				"bzz-raw://32f6e742e4b3399066d87aeaaeaad3ebdd310b43a76ef54694d539b89728a72b",
+				"dweb:/ipfs/Qmb4MF2ceREweuzuFjNxxVzz7rLXs24gH7ogkb2UXz2Ps3"
 			]
 		}
 	},

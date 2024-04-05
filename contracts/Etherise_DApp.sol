@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 contract Etherise {
     
-    // Struct to represent a Campaign
+    // STRUCT TO HOLD ALL ETHERISE CAMPAIGNS
     struct Campaign {
         uint256 campaignID;
         string campaignTitle;
@@ -16,7 +16,7 @@ contract Etherise {
         string coverImage;
     }
 
-    // Struct to represent a Transaction
+    // STRUCT TO HOLD ALL TRANSACTIONS
     struct Transaction {
         uint256 transactionID;
         uint256 amount;
@@ -26,16 +26,16 @@ contract Etherise {
         bool isDeposit; // true if money in, false if money out
     }
 
-    // Mapping to store campaigns by their ID
+    // MAPPING TO STORE CAMPAIGNS BY THEIR CAMPAIGN ID
     mapping(uint256 => Campaign) public campaigns;
 
-    // Mapping to store transactions by campaign ID
+    // MAPPING TO STORE TRANSACTIONS BY THE CAMPAIGNS THEY BELONG TO
     mapping(uint256 => Transaction[]) public transactionsByCampaign;
 
-    // Campaign counter
+    // STATE TO STORE CAMPAIGN COUNT
     uint256 public campaignCounter;
 
-    // Function to add a new campaign
+    // FUNCTION TO ADD A NEW CAMPAIGN: ETH RAISED IS SET TO 0 AND CREATOR'S WALLET IS SET TO MSG.SENDER
     function addCampaign(
         string memory _campaignTitle,
         string memory _aboutCampaign,
@@ -58,12 +58,12 @@ contract Etherise {
         );
     }
 
-    // Function to get details of a specific campaign by its ID
+    // FUNCTION TO GET ALL SINGLE CAMPAIGN DETAILS BY ITS ID
     function getCampaign(uint256 _campaignID) external view returns (Campaign memory) {
         return campaigns[_campaignID];
     }
 
-    // Function to retrieve all campaigns
+    // FUNCTION TO RETURN ALL CAMPAIGNS
     function getAllCampaigns() external view returns (Campaign[] memory) {
         Campaign[] memory allCampaigns = new Campaign[](campaignCounter);
         for (uint256 i = 1; i <= campaignCounter; i++) {
@@ -73,13 +73,13 @@ contract Etherise {
     }
     
 
-    // Function to delete a campaign by its ID (can only be called by the creator)
+    // FUNCTION TO DELETE A CAMPAIGN BY ITS ID - CAN ONLY BE CALLED BY ITS CREATOR
     function deleteCampaign(uint256 _campaignID) external {
         require(msg.sender == campaigns[_campaignID].creatorWallet, "Only the creator can delete the campaign");
         delete campaigns[_campaignID];
     }
 
-    // Function to withdraw funds from a campaign (can only be called by the creator)
+    // FUNCTION TO WITHDRAW FUNDS FROM A CAMPAIGN - CAN ONLY BE CALLED BY ITS CREATOR
     function withdrawFromCampaign(uint256 _campaignID, uint256 _amount) external {
         require(msg.sender == campaigns[_campaignID].creatorWallet, "Only the creator can withdraw from the campaign");
         require(_amount <= campaigns[_campaignID].ethRaised, "Withdrawal amount exceeds raised funds");
@@ -87,12 +87,12 @@ contract Etherise {
         campaigns[_campaignID].ethRaised -= _amount;
     }
 
-    // Function to get transactions by campaign ID
+    // FUNCTION TO GET TRANSACTIONS BY THE CAMPAIGN THEY BELONG TO
     function getTransactionsByCampaign(uint256 _campaignID) external view returns (Transaction[] memory) {
         return transactionsByCampaign[_campaignID];
     }
 
-    // Function to contribute to a campaign
+    // FUNCTION TO DONATE TO AN ETHERISE CAMPAIGN
     function contributeToCampaign(uint256 _campaignID) external payable {
         require(campaigns[_campaignID].isActive, "Campaign is not active");
         campaigns[_campaignID].ethRaised += msg.value;
