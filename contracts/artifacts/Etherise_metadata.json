@@ -4,7 +4,388 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_campaignTitle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_aboutCampaign",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_ethGoal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_businessName",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isActive",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_coverImage",
+						"type": "string"
+					}
+				],
+				"name": "addCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "campaignCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "campaigns",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "campaignID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "campaignTitle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "aboutCampaign",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ethGoal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ethRaised",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "businessName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "creatorWallet",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "coverImage",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_campaignID",
+						"type": "uint256"
+					}
+				],
+				"name": "contributeToCampaign",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_campaignID",
+						"type": "uint256"
+					}
+				],
+				"name": "deleteCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllCampaigns",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "campaignID",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "campaignTitle",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "aboutCampaign",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "ethGoal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "ethRaised",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "businessName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "creatorWallet",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "coverImage",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Etherise.Campaign[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_campaignID",
+						"type": "uint256"
+					}
+				],
+				"name": "getCampaign",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "campaignID",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "campaignTitle",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "aboutCampaign",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "ethGoal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "ethRaised",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "businessName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "creatorWallet",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "coverImage",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Etherise.Campaign",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_campaignID",
+						"type": "uint256"
+					}
+				],
+				"name": "getTransactionsByCampaign",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "transactionID",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "contractAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "transactor",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "campaignID",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isDeposit",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Etherise.Transaction[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "transactionsByCampaign",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "transactionID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "transactor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "campaignID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isDeposit",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_campaignID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawFromCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +414,11 @@
 	},
 	"sources": {
 		"contracts/Etherise_DApp.sol": {
-			"keccak256": "0x46ce5678d624c0e225586212eaf37c5dfc97a48e3c6de215437f4520ced77d52",
-			"license": "GPL-3.0",
+			"keccak256": "0xed265deed08271d487f0d7760423c0d77a5523d0897b9666d9adf052b12769ee",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://73c1175112c86a6fd118441282f5d8a0737745a0f3ef5ea634560f6636a90128",
-				"dweb:/ipfs/QmYoWYu8D47T916Ta3GymGHhK4fZHty284GgmbQPg9G28c"
+				"bzz-raw://8060dd177c9f388d54432cd2f98edcf934f88dea4a2e2dc142415dae38fee543",
+				"dweb:/ipfs/QmYwQXi7L22ReL2WuCgNwgg97eYJZDaLdRPP29SGeucfj1"
 			]
 		}
 	},
